@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reddit App</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-danger mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://assets.ifttt.com/images/channels/1352860597/icons/large.png"
+            width="60"
+            height="50"
+            class="d-inline-block align-top"
+            alt=""
+          /><span class="logo">Reddit</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <img
+        src="https://www.cunninghamwebsolutions.com/wp-content/uploads/2016/10/16277-thumb.jpg"
+        alt="Reddit Official"
+      />
+      <h3>
+        Play with <span class="text-danger">Reddit</span> API and get the search
+        results...!!
+      </h3>
+    </div>
+
+    <div id="search-container" class="container bg-dark mt-4">
+      <div id="search" class="card card-body text-white bg-danger mb-3">
+        <h4 class="font-weight-bold">Go Reddit....!!</h4>
+        <form id="search-form">
+          <div class="form-group">
+            <input
+              type="text"
+              id="search-input"
+              class="form-control mb-3"
+              placeholder="Search something..."
+            />
+          </div>
+          <div class="form-check form-check-inline font-weight-bold mt-3">
+            SORT BY:
+            <input
+              class="form-check-input ml-4"
+              type="radio"
+              name="sortby"
+              value="relevance"
+              checked
+            />
+            <label class="form-check-label text-warning">
+              Relevance
+            </label>
+          </div>
+          <div class="form-check form-check-inline font-weight-bold">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="sortby"
+              value="new"
+            />
+            <label class="form-check-label text-warning">
+              Latest
+            </label>
+          </div>
+          <h5 class="mt-3 font-weight-bold">Limit:</h5>
+          <div class="form-group">
+            <select name="limit" id="limit" class="form-control">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="25" selected>25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark btn-block mt-4">
+            Search
+          </button>
+        </form>
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
